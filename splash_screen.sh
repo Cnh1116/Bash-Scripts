@@ -47,8 +47,5 @@ echo "Shell: $SHELL" >> $system_info
 IMAGE_LINES=$(wc -l < $image_tmp | tr -d ' ')
 SYSTEM_INFORMATION_LINES=$(wc -l < $system_info | tr -d ' ')
 
-if [ "$SYSTEM_INFORMATION_LINES" -lt "$IMAGE_LINES" ]; then
-    awk -v n=$((IMAGE_LINES - SYSTEM_INFORMATION_LINES)) 'BEGIN { for (i=0; i<n; i++) print "" }' >> "$SYSTEM_INFORMATION_LINES"
-fi
 
 paste -d " " $image_tmp $system_info
