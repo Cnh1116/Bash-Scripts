@@ -1,0 +1,25 @@
+format = """
+$directory\
+$git_branch\
+$git_status\
+$time
+$character
+"""
+
+[time]
+format = "[$time]($style)"
+disabled=false
+use_12hr = true
+
+[fill]
+symbol = '~'
+
+[git_branch]
+style = 'fg:teal'
+
+[directory]
+truncation_length = 8
+truncation_symbol = '.../'
+
+[directory.substitutions]
+'git-repos' = 'Git-Repos'
