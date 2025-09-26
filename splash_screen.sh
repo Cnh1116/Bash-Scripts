@@ -8,9 +8,13 @@ bold="tput bold"
 default_color="tput sgr0"
 
 # Image Parameters
-image=/home/porygon/Pictures/porygon-basic-image.png
+image=/home/porygon/Pictures/splash_screen_pics/porygon-basic-image.png
 image_width=80
 image_height=60
+
+if [[ -z $image ]]; then
+	echo "[ ./splash_screen.sh ]: $image DNE. . ."
+fi
 
 # Temp File Locations
 image_tmp=/tmp/splash_screen.txt
